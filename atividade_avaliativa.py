@@ -206,8 +206,15 @@ def desfoca_atualiza():
     time.sleep(1)
 
 
-#arrecadacao_mensal(2010)
-# local_functions.arrecadacao_total_mes(2010, 2012)
-daily_check()
+opcao = input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período):')
+if opcao == '1':
+    ano = input("Qual ano deseja visualizar(2010 até 2022): ")
+    arrecadacao_mensal(ano)
+elif opcao == '2':
+    ano_inicial = int(input('Qual ano inicial(2010 até 2021):'))
+    ano_final = int(input('Qual ano final(até 2021):'))
+    arrecadacao_total_mes(ano_inicial, ano_final)
+else:
+    daily_check()
 
 driver.quit()
