@@ -205,8 +205,8 @@ def desfoca_atualiza():
     time.sleep(1)
 
 
-arrecadacao_mensal(2010)
+#arrecadacao_mensal(2010)
 # local_functions.arrecadacao_total_mes(2010, 2012)
-#daily_check()
+daily_check()
 
 driver.quit()
