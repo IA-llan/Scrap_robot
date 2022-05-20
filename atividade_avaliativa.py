@@ -1,4 +1,5 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
@@ -11,7 +12,7 @@ url = 'https://impostometro.com.br/'
 
 option = Options()
 option.headless = True
-driver = webdriver.Chrome(executable_path="chromedriver.exe")
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 driver.get(url)
 html = driver.page_source
