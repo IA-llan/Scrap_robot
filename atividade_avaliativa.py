@@ -10,6 +10,11 @@ from datetime import datetime
 
 url = 'https://impostometro.com.br/'
 opcao = input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período)(3->Período diário):')
+if opcao == '1':
+    ano = input("Qual ano deseja visualizar(escolha entre 2010 até 2022): ")
+elif opcao == '2':
+    ano_inicial = int(input('Qual ano inicial(escolha entre 2010 até 2021):'))
+    ano_final = int(input('Qual ano final(até 2021):'))
 option = Options()
 option.headless = True
 driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -64,6 +69,7 @@ def arrecadacao_mensal(ano):
 
 
 def delete_line(n):
+    pyautogui.press('left')
     i = 0
     for i in range(n):
         pyautogui.press('delete')
@@ -208,11 +214,8 @@ def desfoca_atualiza():
 
 
 if opcao == '1':
-    ano = input("Qual ano deseja visualizar(2010 até 2022): ")
     arrecadacao_mensal(ano)
 elif opcao == '2':
-    ano_inicial = int(input('Qual ano inicial(2010 até 2021):'))
-    ano_final = int(input('Qual ano final(até 2021):'))
     arrecadacao_total_mes(ano_inicial, ano_final)
 else:
     daily_check()
