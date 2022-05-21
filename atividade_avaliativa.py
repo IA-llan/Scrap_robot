@@ -9,9 +9,9 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 url = 'https://impostometro.com.br/'
-opcao = int(input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período)(3->Período diário):'))
+opcao = input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período)(3->Período diário):')
 if opcao == '1':
-    ano = input("Qual ano deseja visualizar(escolha entre 2010 até 2022): ")
+    ano = int(input("Qual ano deseja visualizar(escolha entre 2010 até 2022): "))
 elif opcao == '2':
     ano_inicial = int(input('Qual ano inicial(escolha entre 2010 até 2021):'))
     ano_final = int(input('Qual ano final(até 2021):'))
