@@ -180,7 +180,7 @@ def atualiza_data_inicio(nova_data):
 
 def atualiza_data_final(final_data):
     driver.find_element(by=By.XPATH, value='//*[@id="contadorestado_dataFinal"]').click()
-    delete_line(10)
+    delete_line(20)
     pyautogui.write(final_data)
     time.sleep(1)
 
