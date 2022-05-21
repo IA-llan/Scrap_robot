@@ -173,7 +173,7 @@ def daily_check():
 
 def atualiza_data_inicio(nova_data):
     driver.find_element(by=By.XPATH, value='//*[@id="contadorestado_dataInicial"]').click()
-    delete_line(10)
+    delete_line(20)
     pyautogui.write(nova_data)
     time.sleep(1)
 
