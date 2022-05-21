@@ -15,6 +15,7 @@ if opcao == '1':
 elif opcao == '2':
     ano_inicial = int(input('Qual ano inicial(escolha entre 2010 até 2021):'))
     ano_final = int(input('Qual ano final(até 2021):'))
+pyautogui.alert("ALERTA: NÃO UTILIZE O COMPUTADOR ENQUANTO O CÓDIGO ESTIVER RODANDO")
 option = Options()
 option.headless = True
 driver = webdriver.Chrome(ChromeDriverManager().install())
