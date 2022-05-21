@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 url = 'https://impostometro.com.br/'
-
+opcao = input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período)(3->Período diário):')
 option = Options()
 option.headless = True
 driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -206,7 +206,7 @@ def desfoca_atualiza():
     time.sleep(1)
 
 
-opcao = input('Qual dos métodos deseja rodar(1->Visualizar ano)(2->Visualizar período):')
+
 if opcao == '1':
     ano = input("Qual ano deseja visualizar(2010 até 2022): ")
     arrecadacao_mensal(ano)
